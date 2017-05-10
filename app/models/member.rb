@@ -24,3 +24,7 @@ end
 
 # closet through find_by_sql
 # Meeting.find_by_sql("SELECT * FROM meetings WHERE meetings.date >= ? AND meetings.in_session = 'true'", self.first_day.to_s)
+
+
+# Member.find_by(last_name: "Bonin").should_have_attended_count
+# Member.find_by(last_name: "Bonin").meetings_attended_count
