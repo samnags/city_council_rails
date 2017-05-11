@@ -18,7 +18,7 @@ class App extends Component {
           />
         </BS.Col>
 
-        <BS.Col lg={4} lgOffset={4}>
+        <BS.Col lg={4} lgOffset={3} className="member">
           <Member/>
         </BS.Col>
       </div>

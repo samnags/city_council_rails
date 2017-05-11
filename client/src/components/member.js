@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import MemberSummary from './member_summary'
 
 class Member extends Component { 
     render() {        
@@ -7,18 +8,10 @@ class Member extends Component {
         if(!member) {
             return <div>Select a member</div>
         }
+
         return (
-            <div>
-                <div>
-                    Name: {`${member.firstName} ${member.lastName}`} <br />
-                    District: {member.district} <br />
-                    Party: {member.party} <br />
-                </div>
-                    <h4>Number of meetings missed: {member.missed}</h4>
-                    <h4>Number of meetings attended: {member.attended}</h4>
-                    <h4>Total number of meetings: {member.total}</h4>
-            </div>
-        );
+         <MemberSummary member={member}/>   
+        )
     }
 }
 
