@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import MemberSummary from './member_summary'
 
 class Member extends Component { 
-    render() {        
+    render() {
         const { member } = this.props
         if(!member) {
             return <div>Select a member</div>
