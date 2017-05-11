@@ -18,6 +18,15 @@ class Member < ActiveRecord::Base
     def meetings_attended_count
         meetings_attended.count
     end
+
+    def missed
+        self.should_have_attended_count - self.meetings_attended_count
+    end
+    
+
+    def ranking
+        #
+    end
     
 
 end
