@@ -10,25 +10,26 @@ const MemberDetail = (props) => {
     
     if(attendances.length > 0) {
         tableRows = attendances.map((attendance) => {            
+        let date = new Date(attendance.meeting.date).toDateString()
           return (
             { 
-                Date: attendance.meeting.date,
-                'In Session': attendance.meeting.in_session,
-                Attended: attendance.attended            
+                Date: date,
+                'In Session?': attendance.meeting.in_session,
+                'Attended?': attendance.attended            
             }
           )
       })
     }
     
     return (
-        <Table
-            className={'table table-bordered table-responsive table-hover'}
-            data={tableRows}
-            // filterable={['Quantity', 'Measurment', 'Name', 'Category']}
-            // filterable={['Category']}
-            // noDataText="No matching records found."
-            // onClick={props.onClick}
-            />
+        <div>
+            <h3>By Meeting Date</h3>
+            <Table
+                className={'table table-bordered table-responsive table-hover'}
+                data={tableRows}            
+                />
+        </div>
+        
     )
 }
 
