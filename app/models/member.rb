@@ -22,6 +22,12 @@ class Member < ActiveRecord::Base
     def missed
         self.should_have_attended_count - self.meetings_attended_count
     end
+
+    # def total
+    #     binding.pry
+    # end
+
+    
     
 
     def ranking

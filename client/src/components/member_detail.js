@@ -14,8 +14,8 @@ const MemberDetail = (props) => {
           return (
             { 
                 Date: date,
-                'In Session?': attendance.meeting.in_session,
-                'Attended?': attendance.attended            
+                'In Session?': attendance.in_session_format,
+                'Attended?': attendance.attended_format            
             }
           )
       })
