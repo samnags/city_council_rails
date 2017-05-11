@@ -9,9 +9,9 @@ const MemberSummary = (props) => {
                 District: {member.district} <br />
                 Party: {member.party} <br />
             </div>
-                <h4>Number of meetings missed: {member.missed}</h4>
-                <h4>Number of meetings attended: {member.meetings_attended_count}</h4>
-                <h4>Total number of meetings: {member.should_have_attended_count}</h4>
+                <h4>Number of meetings missed:   <span>{member.missed}</span></h4>
+                <h4>Number of meetings attended: <span>{member.meetings_attended_count}</span></h4>
+                <h4>Total number of meetings:    <span>{member.should_have_attended_count}</span></h4>
         </div>
         );
 }
